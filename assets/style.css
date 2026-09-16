@@ -20,6 +20,10 @@
 }
 
 *{box-sizing:border-box}
+
+/* Las reglas de display de .gate y .chat ganan sobre el hidden del navegador.
+   Sin esto, el aviso de entrada nunca se cierra. */
+[hidden]{display:none!important}
 html,body{margin:0;padding:0}
 body{
   background:var(--papel);
