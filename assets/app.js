@@ -230,9 +230,10 @@ async function enviar() {
   $('#hilo').appendChild(cargando);
   cargando.scrollIntoView({ behavior: 'smooth', block: 'end' });
 
+  const arts = recuperar(q);
   const contexto = `Ruta seleccionada por el usuario: ${ETIQUETA[ruta]}.\n` +
                    detectarComunas(q) + '\n' +
-                   bloqueCorpus(recuperar(q)) + `\n\nConsulta: ${q}`;
+                   bloqueCorpus(arts) + `\n\nConsulta: ${q}`;
 
   historial.push({ role: 'user', content: contexto });
 
@@ -252,14 +253,52 @@ async function enviar() {
     historial.push({ role: 'assistant', content: texto });
   } catch (e) {
     cargando.remove();
-    burbuja('No se pudo conectar con el servicio. Revise su conexión e ' +
-            'inténtelo de nuevo. Si el problema sigue, su consulta no se envió.',
-            'msg-app');
     historial.pop();
+    respuestaSinIA(arts);        // respaldo: mostrar los artículos encontrados
   } finally {
     $('#enviar').disabled = false;
     $('#pregunta').focus();
   }
+}
+
+/* ── Respaldo sin IA ───────────────────────────────
+   Si el Worker no responde (sin conexión o sin desplegar), no dejamos al
+   usuario en blanco: mostramos los artículos que el recuperador encontró,
+   con su texto y su nota práctica. No redacta ni interpreta: solo cita. */
+function respuestaSinIA(arts) {
+  if (!arts || !arts.length) {
+    burbuja('No pude conectarme al servicio y tampoco encontré artículos que ' +
+            'se ajusten a su consulta. Intente describir su caso con otras ' +
+            'palabras, o consulte a un abogado.', 'msg-app');
+    return;
+  }
+
+  const cont = document.createElement('div');
+  cont.className = 'msg msg-app';
+
+  let html = '<p><strong>No hay conexión con el servicio, así que le muestro ' +
+             'directamente lo que dice la ley sobre su caso.</strong> Este es ' +
+             'el texto de las normas, sin explicación adicional:</p>';
+
+  arts.forEach(a => {
+    const cita = `Art. ${a.articulo} ${a.norma}`;
+    html += `<div class="ficha">` +
+            `<span class="cita">${escapar(cita)}</span> ` +
+            `<span class="ficha-tit">${escapar(a.titulo)}</span>` +
+            `<p class="ficha-txt">${escapar(a.contenido)}</p>` +
+            (a.implicacion_practica
+              ? `<p class="ficha-nota">En la práctica: ${escapar(a.implicacion_practica)}</p>`
+              : '') +
+            `</div>`;
+  });
+
+  html += '<div class="alerta">Información general basada en la normativa ' +
+          'vigente al ' + (CORPUS ? formatearFecha(CORPUS.meta.fecha_corte) : '') +
+          '. No sustituye la asesoría de un abogado.</div>';
+
+  cont.innerHTML = html;
+  $('#hilo').appendChild(cont);
+  cont.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
 
 /* ── Eventos ───────────────────────────────────── */

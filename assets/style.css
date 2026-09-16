@@ -213,3 +213,18 @@ p{margin:0 0 14px}
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
 }
+
+/* Fichas del respaldo sin IA */
+.ficha{
+  border:1px solid var(--lindero);
+  border-radius:var(--r);
+  padding:13px 15px;margin:12px 0;
+  background:var(--papel);
+}
+.ficha-tit{font:700 15.5px "Bitter",serif;color:var(--tinta)}
+.ficha-txt{margin:9px 0 0;font-size:15px;line-height:1.5}
+.ficha-nota{
+  margin:9px 0 0;font-size:14px;line-height:1.5;
+  color:var(--tinta-suave);
+  border-top:1px dashed var(--lindero);padding-top:8px;
+}
