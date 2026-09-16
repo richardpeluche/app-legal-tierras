@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "titulo": "Consultas prediales oficiales — Distrito Metropolitano de Quito",
+    "actualizado": "2026-08-25",
+    "limitacion_tecnica": "Los sistemas del Municipio exigen codigo de verificacion (captcha) y no ofrecen API publica. La app NO consulta predios automaticamente: entrega el enlace y ensena a leer el informe.",
+    "uso": "Cuando la consulta requiera datos del predio (area, uso de suelo, ETAM, afectaciones), derivar a estos enlaces indicando que campo mirar."
+  },
+
+  "enlaces": [
+    {
+      "id": "IRM",
+      "nombre": "Informe de Regulacion Metropolitana (IRM)",
+      "url": "https://pam.quito.gob.ec/mdmq_web_irm/irm/buscarPredio.jsf",
+      "necesita": "Numero de predio, o clave catastral de mas de 7 caracteres. Mas codigo de verificacion.",
+      "gratuito": true,
+      "para_que": "Es el documento clave. Dice que se puede y que no se puede hacer con el lote: uso de suelo, area, ETAM, zona metropolitana."
+    },
+    {
+      "id": "ICUS",
+      "nombre": "Informe de Compatibilidad de Uso de Suelo (ICUS)",
+      "url": "https://pam.quito.gob.ec/mdmq_web_icus/Page?csp=84",
+      "necesita": "Numero de predio o clave catastral. Mas codigo de verificacion.",
+      "gratuito": true,
+      "para_que": "Si la actividad que se quiere realizar es compatible con el uso de suelo asignado."
+    },
+    {
+      "id": "TU-CIUDAD-EN-LINEA",
+      "nombre": "Tu Ciudad en Linea — Sistema de Geoinformacion del DMQ",
+      "url": "https://pam.quito.gob.ec/tuciudadenlinea.aspx",
+      "necesita": "Nada. Es un visor de mapas.",
+      "gratuito": true,
+      "para_que": "Ubicar el predio en el mapa cuando no se tiene el numero. Visualizar limites de barrios, parroquias y administraciones zonales. Renovado y operativo desde octubre de 2025; incluye indicadores territoriales y descarga de informacion geografica.",
+      "nota": "Genera ademas el informe de afectacion por lahares del Cotopaxi a partir del numero de predio."
+    },
+    {
+      "id": "GEOPORTAL",
+      "nombre": "Geoportal del Municipio de Quito",
+      "url": "https://geoportal.quito.gob.ec/geoportalnuevo/",
+      "gratuito": true,
+      "para_que": "Portal geografico institucional. Acceso a visores y capas oficiales."
+    }
+  ],
+
+  "guia_irm": {
+    "que_es": "Informe de Regulacion Metropolitana. Documento oficial y gratuito que resume la situacion normativa de un lote. Se descarga en linea con el numero de predio.",
+    "donde_esta_el_numero_de_predio": "En la carta del impuesto predial, en la escritura, o buscando la direccion en Tu Ciudad en Linea.",
+    "campos_clave": [
+      {"campo":"Area segun escritura","sirve_para":"Comparar con el area real medida. La diferencia entre este campo y el area grafica es el excedente."},
+      {"campo":"Area grafica (sistema catastral)","sirve_para":"Lo que el Municipio tiene registrado graficamente."},
+      {"campo":"Maximo ETAM permitido","sirve_para":"Decide si un excedente se rectifica sin costo o hay que pagarlo. Viene calculado para ese predio."},
+      {"campo":"Zona Metropolitana y Parroquia","sirve_para":"Ubicar la administracion zonal competente y contrastar con el listado de comunas."},
+      {"campo":"En derechos y acciones","sirve_para":"Si dice SI, el predio esta proindiviso. Cambia la ruta: puede caber particion administrativa (Art. 486 COOTAD) o autorizacion municipal previa para particion extrajudicial (Art. 473 COOTAD)."},
+      {"campo":"Estado del predio / del lote","sirve_para":"Si aparece NO DETERMINADO, hay un vacio catastral que conviene resolver antes de cualquier tramite."},
+      {"campo":"Datos del titular del dominio","sirve_para":"A nombre de quien consta. Si no coincide con quien posee, eso define toda la consulta."},
+      {"campo":"Frente total","sirve_para":"Junto con el lote minimo del PUGS, determina si el lote se puede fraccionar."}
+    ],
+    "advertencias": [
+      "El IRM NO es titulo de propiedad ni prueba posesion. Es informacion normativa y catastral.",
+      "Que un predio conste catastrado y con predial pagado no prueba dominio (Art. 57 LOTRTA).",
+      "El IRM no dice si el predio esta dentro de una comuna. Eso hay que preguntarlo aparte.",
+      "La cedula catastral fue reemplazada por el IRM, que tiene informacion mas completa."
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Tierras EC — Orientación legal sobre terrenos",
+  "short_name": "Tierras EC",
+  "description": "Orientación informativa sobre legalización de terrenos, adjudicaciones y tierras comunales en Ecuador.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EDEFE9",
+  "theme_color": "#14614F",
+  "lang": "es-EC",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

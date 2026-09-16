@@ -1,0 +1,958 @@
+{
+  "meta": {
+    "version": "1.5",
+    "fecha_corte": "2026-08-25",
+    "alcance": "Nacional (Ecuador) + Distrito Metropolitano de Quito",
+    "advertencia": "Orientacion informativa. No constituye asesoria juridica ni sustituye a un abogado.",
+    "estado": "Corpus base completo + bloque de comunas ancestrales.",
+    "campo_verificado": "Si verificado=false, el contenido esta confirmado pero el numero de articulo debe cotejarse contra el texto oficial antes de publicar.",
+    "pendientes": [
+      "Verificar numero de articulo de CC-2411 y CC-2413 contra texto oficial",
+      "Cargar lote minimo del DMQ por zona (PUGS de Quito)",
+      "Revisar estado del proyecto de reforma a la Ley Notarial",
+      "Cargar el Acuerdo Ministerial del MAG que dispone la prohibicion de transferencia de tierras comunales (numero y fecha)",
+      "Listado de comunas ancestrales reconocidas en el DMQ",
+      "Confirmar si el Reglamento a la OM 038-2022 fue finalmente expedido y en que texto",
+      "Cargar el Manual de procedimiento y tramites administrativos en materia de tierras rurales (MAG)",
+      "Leer completa la Sentencia 1779-18-EP/21 y extraer las reglas del voto concurrente de Grijalva"
+    ]
+  },
+  "normas": [
+    {
+      "id": "LOTRTA",
+      "nombre": "Ley Organica de Tierras Rurales y Territorios Ancestrales",
+      "tipo": "ley organica",
+      "publicacion": "Registro Oficial Suplemento 711, 14-03-2016",
+      "ultima_reforma": "25-03-2022",
+      "ambito": "nacional",
+      "materia": "tierras rurales, adjudicacion, territorios ancestrales"
+    },
+    {
+      "id": "COOTAD",
+      "nombre": "Codigo Organico de Organizacion Territorial, Autonomia y Descentralizacion",
+      "tipo": "codigo organico",
+      "ambito": "nacional",
+      "materia": "suelo urbano, lotes municipales, mostrencos, titularizacion administrativa"
+    },
+    {
+      "id": "CC",
+      "nombre": "Codigo Civil (Libro II - De los bienes, y Libro IV Titulo XL - De la prescripcion)",
+      "tipo": "codigo",
+      "ambito": "nacional",
+      "materia": "dominio, posesion, tradicion, prescripcion adquisitiva"
+    },
+    {
+      "id": "OM-073-2024",
+      "nombre": "Ordenanza Metropolitana 073-2024 - Regularizacion y titularizacion de asentamientos humanos de hecho y consolidados",
+      "tipo": "ordenanza metropolitana",
+      "publicacion": "aprobada 30-04-2024, sancionada 02-05-2024",
+      "ambito": "Distrito Metropolitano de Quito",
+      "materia": "regularizacion de barrios",
+      "entidad_ejecutora": "Unidad Especial Regula tu Barrio (UERB)"
+    },
+    {
+      "id": "CODIGO-MUNICIPAL-DMQ",
+      "nombre": "Codigo Municipal para el Distrito Metropolitano de Quito (Ordenanza Municipal 001)",
+      "tipo": "codigo municipal",
+      "publicacion": "Registro Oficial Suplemento 902, 07-05-2019",
+      "ambito": "Distrito Metropolitano de Quito",
+      "materia": "excedentes y diferencias de areas, ETAM"
+    },
+    {
+      "id": "LEY-NOTARIAL",
+      "nombre": "Ley Notarial",
+      "tipo": "ley",
+      "publicacion": "Decreto Supremo 1404, Registro Oficial 158, 11-11-1966",
+      "ultima_reforma": "reformas sucesivas; ver RO 913-6S, 30-12-2016 y RO 345-S, 08-12-2020",
+      "ambito": "nacional",
+      "materia": "fe publica, escrituras, protocolizacion",
+      "alerta": "Hay un proyecto de reforma en tramite (2026) para prohibir que los notarios redacten minutas y contratos. Verificar antes de publicar."
+    },
+    {
+      "id": "LOOTUGS",
+      "nombre": "Ley Organica de Ordenamiento Territorial, Uso y Gestion de Suelo",
+      "tipo": "ley organica",
+      "publicacion": "Registro Oficial Suplemento 790, 05-07-2016",
+      "ambito": "nacional",
+      "materia": "clasificacion del suelo, fraccionamiento, lote minimo, cargas urbanisticas"
+    },
+    {
+      "id": "LEY-COMUNAS",
+      "nombre": "Ley de Organizacion y Regimen de las Comunas (Codificacion 4)",
+      "tipo": "ley",
+      "publicacion": "Codificacion publicada en 2004; origen Decreto Supremo de 1937",
+      "ambito": "nacional",
+      "materia": "comunas, cabildo, bienes colectivos",
+      "aliases": [
+        "Ley de Comunas"
+      ]
+    },
+    {
+      "id": "CRE",
+      "nombre": "Constitucion de la Republica del Ecuador",
+      "tipo": "constitucion",
+      "publicacion": "Registro Oficial 449, 20-10-2008",
+      "ambito": "nacional",
+      "materia": "derechos colectivos de comunas, comunidades, pueblos y nacionalidades"
+    },
+    {
+      "id": "REG-LOTRTA",
+      "nombre": "Reglamento a la Ley Organica de Tierras Rurales y Territorios Ancestrales",
+      "tipo": "reglamento",
+      "publicacion": "Decreto Ejecutivo, 16-12-2016",
+      "ambito": "nacional",
+      "materia": "procedimientos de adjudicacion y certificacion de uso y usufructo"
+    },
+    {
+      "id": "KITU-KARA",
+      "nombre": "Pueblo Kitu Kara — pueblo originario y organizacion de apoyo a las comunas",
+      "tipo": "contexto organizativo e institucional (no es norma)",
+      "ambito": "Distrito Metropolitano de Quito y Pichincha",
+      "materia": "estructura de gobierno comunitario",
+      "aliases": [
+        "Kitu Kara",
+        "Kitukara",
+        "Quitu Cara"
+      ]
+    },
+    {
+      "id": "OM-038-2022",
+      "nombre": "Ordenanza Metropolitana 038-2022 — Sistema Metropolitano de Participacion Ciudadana y Control Social (y su proyecto de Reglamento)",
+      "tipo": "ordenanza metropolitana",
+      "publicacion": "sancionada 30-08-2022 por el Alcalde del DMQ",
+      "ambito": "Distrito Metropolitano de Quito",
+      "materia": "participacion ciudadana, asambleas comunales",
+      "alerta": "NO regula tierras ni titulacion. El Reglamento en poder del usuario es un BORRADOR con observaciones marcadas; no citar como norma vigente hasta confirmar su expedicion."
+    }
+  ],
+  "articulos": [
+    {
+      "id": "CC-2392",
+      "norma": "CC",
+      "articulo": "2392",
+      "titulo": "Prescripcion - definicion",
+      "verificado": true,
+      "temas": [
+        "prescripcion",
+        "modo de adquirir"
+      ],
+      "contenido": "La prescripcion es un modo de adquirir las cosas ajenas, o de extinguir las acciones y derechos ajenos, por haberse poseido las cosas, o no haberse ejercido dichas acciones y derechos, durante cierto tiempo, y concurriendo los demas requisitos legales.",
+      "implicacion_practica": "Adquisitiva (se gana el dominio) y extintiva (se pierde la accion) son cosas distintas. El ciudadano casi siempre pregunta por la adquisitiva."
+    },
+    {
+      "id": "CC-2408",
+      "norma": "CC",
+      "articulo": "2408",
+      "titulo": "Plazo de la prescripcion ordinaria",
+      "temas": [
+        "prescripcion ordinaria",
+        "plazos"
+      ],
+      "contenido": "El tiempo necesario en la prescripcion ordinaria es de tres anos para los bienes muebles y de cinco para los raices.",
+      "implicacion_practica": "Requiere posesion REGULAR (justo titulo y buena fe). Poco frecuente en la practica.",
+      "verificado": true
+    },
+    {
+      "id": "CC-2410",
+      "norma": "CC",
+      "articulo": "2410",
+      "titulo": "Prescripcion extraordinaria",
+      "temas": [
+        "prescripcion extraordinaria",
+        "quince anos"
+      ],
+      "contenido": "El dominio de las cosas comerciales que no ha sido adquirido por la prescripcion ordinaria puede serlo por la extraordinaria. Cabe la prescripcion extraordinaria contra titulo inscrito. Para la prescripcion extraordinaria no es necesario titulo alguno; basta la posesion material. El plazo es de quince anos.",
+      "implicacion_practica": "La via mas consultada para terrenos privados sin escritura. Juicio ordinario ante juez civil (COGEP).",
+      "verificado": true
+    },
+    {
+      "id": "CC-2411",
+      "norma": "CC",
+      "articulo": "2411",
+      "titulo": "Reglas de la prescripcion extraordinaria - el mero tenedor",
+      "verificado": false,
+      "temas": [
+        "prescripcion extraordinaria",
+        "mero tenedor",
+        "arrendatario",
+        "quince anos"
+      ],
+      "contenido": "Reglas de la prescripcion extraordinaria: no es necesario titulo alguno, basta la posesion material. Si quien inicio la posesion era inmediatamente antes un MERO TENEDOR de la cosa (por ejemplo un arrendatario, que como tal reconocia dominio ajeno), es indispensable que pruebe haber desconocido su condicion de mero tenedor y haber poseido sin violencia ni clandestinidad, con animo de senor y dueno. El tiempo para esta clase de prescripcion es de quince anos.",
+      "implicacion_practica": "Filtro decisivo: el arrendatario, el cuidador, el prestatario NO prescriben por mas anos que pasen, salvo que prueben el cambio de condicion. Muy consultado por gente que cuido un terreno por decadas.",
+      "nota_interna": "Numero de articulo pendiente de verificar contra el texto oficial. El contenido esta confirmado por la Procuraduria General del Estado."
+    },
+    {
+      "id": "CC-2413",
+      "norma": "CC",
+      "articulo": "2413",
+      "titulo": "Inscripcion de la sentencia de prescripcion",
+      "verificado": false,
+      "temas": [
+        "sentencia",
+        "Registro de la Propiedad",
+        "inscripcion"
+      ],
+      "contenido": "La sentencia judicial que declara la prescripcion adquisitiva hara las veces de escritura publica para la propiedad de bienes raices o de derechos reales constituidos en ellos; pero no valdra contra terceros sin la competente inscripcion en el Registro de la Propiedad.",
+      "implicacion_practica": "Ganar el juicio no basta: hay que inscribir la sentencia. Sin inscripcion no opone frente a terceros. Error frecuente de quien creyo que con la sentencia ya termino."
+    },
+    {
+      "id": "CC-605",
+      "norma": "CC",
+      "articulo": "605",
+      "titulo": "Bienes sin dueno pertenecen al Estado",
+      "verificado": true,
+      "temas": [
+        "bienes baldios",
+        "Estado",
+        "sin dueno"
+      ],
+      "contenido": "Las tierras que, estando situadas dentro de los limites territoriales, carecen de otro dueno, pertenecen al Estado.",
+      "implicacion_practica": "Regla base: en Ecuador no existe el terreno de nadie. Si no tiene dueno conocido, es del Estado (rural) o entra como mostrenco al municipio (urbano)."
+    },
+    {
+      "id": "CC-715",
+      "norma": "CC",
+      "articulo": "715",
+      "titulo": "Posesion - definicion",
+      "verificado": true,
+      "temas": [
+        "posesion",
+        "animo de senor y dueno"
+      ],
+      "contenido": "Posesion es la tenencia de una cosa determinada con animo de senor o dueno; sea que el dueno o el que se da por tal tenga la cosa por si mismo, o bien por otra persona en su lugar y a su nombre. El poseedor es reputado dueno, mientras otra persona no justifica serlo.",
+      "implicacion_practica": "El animo de senor y dueno es lo que distingue al poseedor del arrendatario o del cuidador. Quien paga arriendo NO posee: es mero tenedor y nunca prescribe."
+    },
+    {
+      "id": "CC-717",
+      "norma": "CC",
+      "articulo": "717",
+      "titulo": "Posesion regular e irregular",
+      "verificado": true,
+      "temas": [
+        "posesion regular",
+        "justo titulo",
+        "buena fe"
+      ],
+      "contenido": "La posesion puede ser regular o irregular. Se llama posesion regular la que procede de justo titulo y ha sido adquirida de buena fe, aunque la buena fe no subsista despues de adquirida la posesion. Se puede ser, por consiguiente, poseedor regular y poseedor de mala fe; y viceversa, el poseedor de buena fe puede ser poseedor irregular. Si el titulo es translativo de dominio, es tambien necesaria la tradicion.",
+      "implicacion_practica": "Solo la posesion REGULAR permite la prescripcion ordinaria de 5 anos. Sin justo titulo y buena fe, la unica via es la extraordinaria de 15 anos."
+    },
+    {
+      "id": "CC-722",
+      "norma": "CC",
+      "articulo": "722",
+      "titulo": "Presuncion de buena fe",
+      "verificado": true,
+      "temas": [
+        "buena fe",
+        "prueba"
+      ],
+      "contenido": "La buena fe se presume, excepto en los casos en que la ley establece la presuncion contraria. En todos los demas casos, la mala fe debera probarse.",
+      "implicacion_practica": "Ventaja procesal del poseedor: no tiene que probar su buena fe; quien lo acusa debe probar la mala fe."
+    },
+    {
+      "id": "CC-723",
+      "norma": "CC",
+      "articulo": "723",
+      "titulo": "Posesion irregular",
+      "verificado": true,
+      "temas": [
+        "posesion irregular"
+      ],
+      "contenido": "Posesion irregular es la que carece de uno o mas de los requisitos senalados en el articulo 717.",
+      "implicacion_practica": "El caso mas comun: entro sin escritura ni titulo. Va por prescripcion extraordinaria."
+    },
+    {
+      "id": "CC-724",
+      "norma": "CC",
+      "articulo": "724 a 725",
+      "titulo": "Posesiones viciosas - violenta y clandestina",
+      "verificado": true,
+      "temas": [
+        "posesion viciosa",
+        "violencia",
+        "clandestinidad",
+        "invasion"
+      ],
+      "contenido": "Son posesiones viciosas la violenta y la clandestina. Posesion violenta es la que se adquiere por la fuerza; la fuerza puede ser actual o inminente. Hay violencia sea que se haya empleado contra el verdadero dueno de la cosa, o contra el que la poseia sin serlo. El que, en ausencia del dueno, se apodera de la cosa y, volviendo el dueno, le repele, es tambien poseedor violento.",
+      "implicacion_practica": "CLAVE: quien entro por la fuerza o a escondidas tiene posesion viciosa. Aunque pasen 20 anos, ese origen se puede alegar en su contra. La app NO debe alentar a quien describe una invasion."
+    },
+    {
+      "id": "DMQ-ETAM",
+      "norma": "CODIGO-MUNICIPAL-DMQ",
+      "articulo": "2241 al 2260",
+      "titulo": "ETAM - Error Tecnico Aceptable de Medicion en Quito",
+      "temas": [
+        "Quito",
+        "ETAM",
+        "excedentes",
+        "diferencias",
+        "catastro",
+        "medicion"
+      ],
+      "contenido": "El ETAM es el porcentaje de diferencia que se acepta entre el area que consta en el titulo de propiedad (escritura) y la superficie resultante de la medicion realizada por el Municipio. Valores vigentes en el DMQ: area URBANA 10%; area RURAL de 1 a 25.000 m2 el 10%; area RURAL de 25.001 m2 en adelante el 5%. Cualquier excedente o diferencia que NO supere el ETAM solo constituye una presuncion de excedente o diferencia. Si el excedente SUPERA el ETAM, la autoridad administrativa competente emite acto administrativo disponiendo la rectificacion de la medicion y del avaluo del lote. El tramite se realiza ante la Direccion Metropolitana de Catastro. Para realizar una transferencia de dominio NO es necesario solicitar previamente la regularizacion de areas.",
+      "implicacion_practica": "Numeros concretos que la app puede dar: 10% urbano, 10% rural hasta 25.000 m2, 5% rural sobre 25.001 m2. Dentro del ETAM se rectifica el catastro; fuera del ETAM se rectifica medicion y avaluo, y ahi es donde el propietario paga.",
+      "verificado": true
+    },
+    {
+      "id": "COOTAD-419",
+      "norma": "COOTAD",
+      "articulo": "419 lit. c",
+      "titulo": "Bienes mostrencos como bien de dominio privado municipal",
+      "temas": [
+        "mostrencos",
+        "dominio privado",
+        "patrimonio municipal"
+      ],
+      "contenido": "Entre los bienes de dominio privado de los gobiernos autonomos descentralizados constan los bienes mostrencos situados dentro de las respectivas circunscripciones territoriales.",
+      "implicacion_practica": "Es la base que permite al municipio incorporar a su patrimonio un predio urbano sin dueno antes de adjudicarlo. Primero pasa a ser del municipio, despues se titulariza.",
+      "verificado": true
+    },
+    {
+      "id": "COOTAD-424",
+      "norma": "COOTAD",
+      "articulo": "424",
+      "titulo": "Contribucion obligatoria de area verde, comunitaria y vias",
+      "temas": [
+        "areas verdes",
+        "fraccionamiento",
+        "urbanizacion",
+        "herencia"
+      ],
+      "contenido": "Se entregara como minimo el quince por ciento (15%) calculado del area util urbanizable del terreno a urbanizar en calidad de areas verdes y equipamiento comunitario, destinando exclusivamente para areas verdes al menos el cincuenta por ciento de la superficie entregada. Se exceptuan de esta entrega las tierras rurales que se fraccionen con fines de particion hereditaria, donacion o venta, siempre y cuando no se destinen para urbanizacion y lotizacion.",
+      "implicacion_practica": "Consulta muy frecuente: dividir un terreno rural entre herederos NO obliga a ceder el 15%. Lotizar para vender si.",
+      "verificado": true
+    },
+    {
+      "id": "COOTAD-473",
+      "norma": "COOTAD",
+      "articulo": "473",
+      "titulo": "Particion extrajudicial - autorizacion municipal previa",
+      "temas": [
+        "particion extrajudicial",
+        "herederos",
+        "copropietarios",
+        "autorizacion"
+      ],
+      "contenido": "En el caso de particion extrajudicial, los interesados pediran al gobierno municipal o metropolitano la autorizacion respectiva, sin la cual no podra realizarse la particion.",
+      "implicacion_practica": "REGLA CRITICA: herederos que se reparten un lote de mutuo acuerdo necesitan autorizacion municipal ANTES de ir al notario. Sin ella la particion no puede realizarse ni inscribirse.",
+      "verificado": true
+    },
+    {
+      "id": "COOTAD-481",
+      "norma": "COOTAD",
+      "articulo": "481",
+      "titulo": "Lotes, fajas o excedentes municipales",
+      "temas": [
+        "lotes",
+        "fajas",
+        "excedentes",
+        "diferencias",
+        "enajenacion",
+        "mostrencos"
+      ],
+      "contenido": "Para efectos de su enajenacion, los terrenos de propiedad de los GAD municipales o metropolitanos se consideran como lotes, fajas o excedentes provenientes de errores de medicion. LOTES: terrenos en los cuales, de acuerdo con las ordenanzas, es posible levantar una construccion independiente de las ya existentes o por levantarse en los terrenos vecinos. FAJAS: porciones de terreno que por sus reducidas dimensiones o por provenir de rellenos no pueden soportar una construccion independiente de las de los inmuebles vecinos, ni sea conveniente mantenerlas como espacios verdes comunitarios; solo pueden ser adquiridas mediante el procedimiento de adjudicacion forzosa por los propietarios colindantes. EXCEDENTES O DIFERENCIAS: superficies de terreno que excedan del area original que conste en el respectivo titulo y que se determinen al efectuar una medicion municipal por cualquier causa, o que resulten como diferencia entre una medicion anterior y la ultima practicada, por errores de calculo o de medidas; se adjudicaran al propietario del lote que ha sido mal medido cobrandole el precio de mercado. Se entienden mostrencos los bienes inmuebles que carecen de dueno conocido; los GAD municipales estableceran mediante ordenanza los mecanismos y procedimientos para regularizarlos.",
+      "implicacion_practica": "Cubre cuatro figuras distintas que la gente confunde. FAJA: solo la puede comprar el vecino colindante, por adjudicacion forzosa. EXCEDENTE: se lo quedan, pero pagando precio de mercado al municipio.",
+      "verificado": true
+    },
+    {
+      "id": "COOTAD-481.1",
+      "norma": "COOTAD",
+      "articulo": "481.1",
+      "titulo": "Excedentes o diferencias de terrenos de propiedad privada",
+      "temas": [
+        "excedentes",
+        "ETAM",
+        "error tecnico aceptable de medicion",
+        "linderos consolidados"
+      ],
+      "contenido": "Por excedentes de un terreno de propiedad privada se entiende aquellas superficies que forman parte de terrenos con linderos consolidados, que superan el area original que conste en el respectivo titulo de dominio al efectuar una medicion municipal por cualquier causa, o resulten como diferencia entre una medicion anterior y la ultima practicada, por errores de calculo o de medicion. Si el excedente supera el error tecnico de medicion previsto en la respectiva ordenanza del GAD municipal o metropolitano, se rectificara el area del titulo cobrando el precio correspondiente. Si el excedente NO supera el error tecnico aceptable de medicion (ETAM), se rectifica sin costo.",
+      "implicacion_practica": "El ETAM lo fija cada municipio en su ordenanza, no la ley nacional. Es el dato que decide si el ciudadano paga o no. Para Quito hay que verificar la ordenanza vigente.",
+      "verificado": true
+    },
+    {
+      "id": "COOTAD-486",
+      "norma": "COOTAD",
+      "articulo": "486",
+      "titulo": "Titularizacion administrativa y particion administrativa",
+      "temas": [
+        "titularizacion administrativa",
+        "particion administrativa",
+        "proindiviso",
+        "prohibiciones"
+      ],
+      "contenido": "Literal f): mediante ordenanza, los concejos municipales y distritales estableceran los procedimientos de titularizacion administrativa a favor de los posesionarios de predios que carezcan de titulo inscrito. Cuando por resolucion del organo de legislacion y fiscalizacion del GAD municipal o metropolitano se requiera regularizar y legalizar asentamientos humanos consolidados de interes social ubicados en predios que se encuentren proindiviso, la alcaldesa o el alcalde, a traves de los organos administrativos de la municipalidad, de oficio o a peticion de parte, estara facultado para ejercer la particion administrativa. En los casos de asentamientos de hecho y consolidados declarados de interes social en que no se ha previsto el porcentaje de areas verdes y comunales establecido en la ley, seran exonerados de este porcentaje. NO podran titularizarse predios de proteccion forestal, de pendientes superiores al treinta por ciento (30%) ni los que correspondan a riberas de rios, lagos y playas.",
+      "implicacion_practica": "Dos figuras: titularizacion (dar titulo a quien no lo tiene) y particion administrativa (dividir un predio proindiviso sin juez). Las tres prohibiciones son el primer filtro de toda consulta urbana: bosque protector, pendiente mayor al 30%, riberas.",
+      "verificado": true
+    },
+    {
+      "id": "COOTAD-596",
+      "norma": "COOTAD",
+      "articulo": "596",
+      "titulo": "Expropiacion especial para regularizacion de asentamientos humanos de interes social en suelo urbano y de expansion urbana",
+      "temas": [
+        "asentamientos",
+        "utilidad publica",
+        "adjudicacion"
+      ],
+      "contenido": "Para regularizar asentamientos humanos de hecho y consolidados en suelo urbano y de expansion urbana de propietarios particulares, los gobiernos metropolitanos o municipales, mediante resolucion del organo legislativo, podran declarar esos predios de utilidad publica con el proposito de dotar de servicios basicos a los predios ocupados y definir la situacion juridica de los posesionarios, adjudicandoles los lotes correspondientes.",
+      "implicacion_practica": "Base legal de 'Regula tu Barrio' y equivalentes.",
+      "verificado": true
+    },
+    {
+      "id": "CRE-57",
+      "norma": "CRE",
+      "articulo": "57 num. 4, 5, 17",
+      "titulo": "Derechos colectivos sobre tierras y territorios",
+      "verificado": true,
+      "temas": [
+        "comuna",
+        "derechos colectivos",
+        "tierras comunitarias",
+        "consulta previa",
+        "imprescriptible"
+      ],
+      "contenido": "Se reconoce y garantiza a las comunas, comunidades, pueblos y nacionalidades indigenas, al pueblo afroecuatoriano y al pueblo montubio: num. 4, conservar la propiedad imprescriptible de sus tierras comunitarias, que seran inalienables, inembargables e indivisibles y estaran exentas del pago de tasas e impuestos; num. 5, mantener la posesion de las tierras y territorios ancestrales y obtener su adjudicacion gratuita; num. 17, ser consultados antes de la adopcion de una medida legislativa que pueda afectar cualquiera de sus derechos colectivos.",
+      "implicacion_practica": "Las cuatro caracteristicas (imprescriptible, inalienable, inembargable, indivisible) son rango CONSTITUCIONAL. Ninguna ley, ordenanza ni acuerdo de asamblea las puede levantar."
+    },
+    {
+      "id": "CC-1779-18-EP-21",
+      "norma": "JURISPRUDENCIA",
+      "articulo": "Sentencia 1779-18-EP/21",
+      "titulo": "Caso La Toglla — autodeterminacion y territorio comunal",
+      "verificado": true,
+      "temas": [
+        "La Toglla",
+        "Kitu Kara",
+        "autodeterminacion",
+        "MAG",
+        "territorio comunal",
+        "derechos colectivos",
+        "comuna"
+      ],
+      "contenido": "Corte Constitucional del Ecuador, 28 de julio de 2021. Accion extraordinaria de proteccion de la comunidad ancestral La Toglla (pueblo Kitu Kara, nacionalidad Kichwa) contra el Ministerio de Agricultura y Ganaderia. La Corte declaro que las sentencias de instancia vulneraron el derecho al debido proceso en la garantia de la motivacion, por limitarse a un analisis procedimental sin examinar derecho alguno, y las dejo sin efecto. En sentencia de merito declaro la violacion de derechos colectivos derivados del derecho a la AUTODETERMINACION, que se manifiesta en cuatro dimensiones: 1) la autodefinicion; 2) el derecho propio; 3) la organizacion social y la designacion de sus autoridades; y 4) el territorio y su relacion con la naturaleza. El voto concurrente del juez Agustin Grijalva desarrolla los parametros constitucionales de reconocimiento de las comunas. Base: Art. 57 numerales 1, 9 y 10 de la Constitucion.",
+      "implicacion_practica": "PRECEDENTE CENTRAL para la rama comunal. La Toglla es la comuna 67 del listado del DMQ (parroquia Guangopolo). Confirma que: la comuna se autodefine (no depende de que el Estado la reconozca), designa sus propias autoridades, y su territorio es parte de su derecho a la autodeterminacion. Util cuando terceros o el propio MAG desconocen al cabildo legitimo."
+    },
+    {
+      "id": "CC-2145-11-EP-22",
+      "norma": "JURISPRUDENCIA",
+      "articulo": "Sentencia 2145-11-EP/22",
+      "titulo": "Caso comuna Rio Manta — delimitacion de territorio comunal",
+      "verificado": true,
+      "temas": [
+        "delimitacion",
+        "territorio comunal",
+        "MAG",
+        "procedimiento administrativo"
+      ],
+      "contenido": "Corte Constitucional. Constato que la tramitacion de las solicitudes de delimitacion de territorio comunal es un proceso ADMINISTRATIVO, establecido conforme a los articulos 79 y 80 de la LOTRTA en el Manual de procedimiento y tramites administrativos en materia de tierras rurales de la LOTRTA y su Reglamento General. Esa normativa debe ser aplicada por la unidad tecnica del MAG para atender la solicitud de la comuna.",
+      "implicacion_practica": "Ruta concreta cuando una comuna necesita delimitar su territorio: solicitud administrativa ante la unidad tecnica del MAG, siguiendo el Manual de procedimiento. No es juicio.",
+      "nota_interna": "Falta cargar el Manual de procedimiento y tramites administrativos en materia de tierras rurales del MAG."
+    },
+    {
+      "id": "CNJ-07-2025",
+      "norma": "JURISPRUDENCIA",
+      "articulo": "Resolucion 07-2025",
+      "titulo": "Singularizacion del inmueble en prescripcion y reivindicacion",
+      "temas": [
+        "prescripcion",
+        "requisitos de la demanda",
+        "jurisprudencia obligatoria"
+      ],
+      "contenido": "Resolucion de la Corte Nacional de Justicia. En la accion de prescripcion extraordinaria adquisitiva de dominio se debe exigir precision y claridad en la determinacion del inmueble, no solo respecto de su ubicacion geografica sino tambien de su cabida y linderos, con la finalidad de que no se afecten derechos de terceros.",
+      "implicacion_practica": "Jurisprudencia obligatoria reciente. Demanda sin linderos y cabida precisos se cae. Se necesita levantamiento topografico previo.",
+      "verificado": true
+    },
+    {
+      "id": "CIDH-titulacion-ancestral",
+      "norma": "KITU-KARA",
+      "articulo": "contexto — CIDH",
+      "verificado": true,
+      "titulo": "Barrera estructural: el registro exige un titulo que el derecho ancestral no produce",
+      "temas": [
+        "titulacion",
+        "territorio ancestral",
+        "Registro de la Propiedad",
+        "Codigo Civil",
+        "barrera legal"
+      ],
+      "contenido": "La Comision Interamericana de Derechos Humanos ha senalado que en Ecuador existen barreras legales al goce pleno y efectivo del derecho a la titulacion del territorio ancestral, debido a que el Codigo Civil establece que se requiere un titulo registrado para probar la propiedad de la tierra.",
+      "implicacion_practica": "Explica por que tantas comunas del DMQ siguen sin papeles pese a tener derechos constitucionales: el sistema registral pide un documento que el derecho ancestral no genera. Util para que la app no culpe al comunero de no tener escritura ni le prometa que conseguirla es cuestion de hacer un tramite.",
+      "nota_interna": "Es contexto de derechos humanos, no norma vigente citable como base legal."
+    },
+    {
+      "id": "KITU-KARA-estructura",
+      "norma": "KITU-KARA",
+      "articulo": "contexto",
+      "titulo": "Pueblo Kitu Kara: pueblo originario y organizacion que asiste a las comunas",
+      "verificado": true,
+      "temas": [
+        "Kitu Kara",
+        "comuna",
+        "cabildo",
+        "invasion",
+        "conflicto de tierras",
+        "ECUARUNARI",
+        "CONAIE",
+        "apoyo",
+        "Quito"
+      ],
+      "contenido": "El Kitu Kara es un pueblo originario kichwa de Pichincha, asentado alrededor y dentro de Quito; en su III Congreso (febrero de 2010, parroquia de Puembo) se autodefinieron como Nacion Originaria Kitu Kara, con Gobernacion de la Nacion Originaria y Consejo de Mayores en lugar de presidencia. ADEMAS DE SER UN PUEBLO, funciona como la ORGANIZACION ENCARGADA DE APOYAR A LAS COMUNAS LEGALIZADAS en conflictos de invasion de tierras y otros asuntos. Es parte de la estructura de la ECUARUNARI, filial de la CONAIE. ESTRUCTURA DE GOBIERNO: el Consejo de Gobierno esta conformado por siete dirigencias: Presidencia, Vicepresidencia, Fortalecimiento Organizativo, TIERRAS Y TERRITORIOS, Mujer, Jovenes y Comunicacion. Funciona en dos niveles de representacion: la Asamblea (representacion de autoridades) y el Congreso (representacion delegativa), en el que participan cinco delegados de cada comuna con voz y voto; el mandato del Consejo proviene del nivel delegativo. Su antecedente organizativo es la Federacion Provincial de Comunidades Indigenas y Campesinas Pichincha Runacunapac Riccharimui, que se transformo en la Confederacion del Pueblo Kayambi y el Pueblo Kitu Kara. Cuenta con sede propia en Quito (casa del pueblo Kitu Kara). En las llactas la forma de organizacion es la comuna, con cabildo integrado por presidente, vicepresidente, tesorero, sindico y secretario; las decisiones se toman en asamblea general y el trabajo colectivo se organiza por mingas.",
+      "implicacion_practica": "DOS USOS DISTINTOS EN LA APP. (1) Clasificador: si el usuario menciona cabildo, sindico, minga, asamblea general o comuneros, la consulta va por la rama comunal. (2) DERIVACION: ante un conflicto de invasion en territorio de una comuna legalizada, ademas del MAG y de un abogado, corresponde derivar a la DIRIGENCIA DE TIERRAS Y TERRITORIOS del Consejo de Gobierno del Pueblo Kitu Kara: es la instancia especifica para ese tipo de caso, no una mencion generica a la organizacion.",
+      "nota_interna": "No es norma juridica: no citarlo como base legal, solo para clasificar y derivar. Confirmado por el usuario, que pertenece a una comuna del DMQ."
+    },
+    {
+      "id": "COM-1",
+      "norma": "LEY-COMUNAS",
+      "articulo": "1 y 2",
+      "titulo": "Que es una comuna y a que jurisdiccion pertenece",
+      "verificado": true,
+      "temas": [
+        "comuna",
+        "definicion",
+        "caserio",
+        "anejo",
+        "barrio",
+        "parroquia"
+      ],
+      "contenido": "Todo centro poblado que no tenga la categoria de parroquia, que existiera actualmente o que se estableciere en el futuro, conocido con el nombre de caserio, anejo, barrio, partido, comunidad, parcialidad o cualquier otra designacion, llevara el nombre de comuna, ademas del nombre propio con el que haya existido o se fundare. La comuna estara sujeta a la jurisdiccion de la parroquia urbana o rural dentro de cuya circunscripcion territorial se encuentre.",
+      "implicacion_practica": "OJO: una comuna puede estar dentro de una parroquia URBANA. Existen comunas ancestrales dentro del casco urbano de Quito. Que sea urbano no la saca del regimen comunal."
+    },
+    {
+      "id": "COM-3",
+      "norma": "LEY-COMUNAS",
+      "articulo": "3",
+      "titulo": "Personeria juridica de las comunas",
+      "verificado": true,
+      "temas": [
+        "personeria juridica",
+        "comuna",
+        "derechos colectivos"
+      ],
+      "contenido": "Las comunas se regiran por esta Ley y adquiriran personeria juridica por el solo hecho de atenerse a ella. En su aplicacion se garantiza el ejercicio de los derechos colectivos de los pueblos indigenas que se autodefinen como nacionalidades de raices ancestrales y de los pueblos negros o afroecuatorianos, asi como de las comunidades que forman parte de estas colectividades.",
+      "implicacion_practica": "La comuna no necesita constituirse como fundacion ni asociacion: su personeria nace de la ley."
+    },
+    {
+      "id": "COM-4",
+      "norma": "LEY-COMUNAS",
+      "articulo": "4",
+      "titulo": "Las comunas dependen administrativamente del MAG",
+      "verificado": true,
+      "temas": [
+        "MAG",
+        "competencia",
+        "supervision"
+      ],
+      "contenido": "Administrativamente las comunas dependen del Ministerio de Agricultura y Ganaderia. Los derechos que esta Ley concede a las comunas estaran supervisados y dirigidos por el indicado Ministerio.",
+      "implicacion_practica": "RUTA DISTINTA: aunque la comuna este en zona urbana de Quito, la entidad competente sobre su regimen comunal es el MAG, no el Municipio. Este es el error de derivacion mas comun."
+    },
+    {
+      "id": "COM-7",
+      "norma": "LEY-COMUNAS",
+      "articulo": "7 y 8",
+      "titulo": "Bienes colectivos y el cabildo",
+      "verificado": true,
+      "temas": [
+        "bienes colectivos",
+        "cabildo",
+        "representacion",
+        "sindico"
+      ],
+      "contenido": "Los bienes que la comuna posea o adquiera en comun seran patrimonio de todos sus habitantes; su uso y goce se adecuaran en cada caso a la mejor conveniencia de cada uno de ellos, mediante la reglamentacion que se dicte libremente para su administracion. El organo oficial y representativo de la comuna es el CABILDO, integrado por cinco miembros: presidente, vicepresidente, tesorero, sindico y secretario.",
+      "implicacion_practica": "Solo el cabildo representa oficialmente a la comuna. Un comunero individual NO puede disponer del bien comunal ni actuar por la comuna. Verificar siempre nombramiento inscrito y vigente."
+    },
+    {
+      "id": "COM-9",
+      "norma": "LEY-COMUNAS",
+      "articulo": "9, 10 y 12",
+      "titulo": "Registro de comuneros, inventario de bienes y reglamento interno",
+      "verificado": true,
+      "temas": [
+        "registro de comuneros",
+        "inventario",
+        "reglamento interno"
+      ],
+      "contenido": "En cada comuna se establecera un registro llevado por el presidente y el secretario del cabildo, en un libro donde se anotaran los nombres de todos los habitantes que residan en el lugar. Se llevara ademas un Libro de Inventarios de los bienes que en comun posea la comuna, segun el modelo que proporcione el Ministerio; copia autenticada por el presidente y el secretario se remitira a dicho Ministerio. Cada cabildo expedira el reglamento mas adecuado para el ejercicio de esta funcion y lo sometera a la aprobacion del Ministerio de Agricultura y Ganaderia.",
+      "implicacion_practica": "Ser comunero se acredita con el registro del cabildo. Quien no consta en el libro no es comunero, aunque viva ahi."
+    },
+    {
+      "id": "MAG-PROHIBICION-COMUNAL",
+      "norma": "LEY-COMUNAS",
+      "articulo": "prohibicion de transferencia",
+      "titulo": "Prohibicion de registrar escrituras publicas sobre tierras comunales",
+      "verificado": true,
+      "temas": [
+        "venta de lotes",
+        "comuna",
+        "nulidad",
+        "trafico de tierras",
+        "Registro de la Propiedad",
+        "notario"
+      ],
+      "contenido": "El Ministerio de Agricultura y Ganaderia ha dispuesto la prohibicion de cualquier tipo de transferencia de tierras comunales y del registro de escrituras publicas sobre ellas, con sustento en la Constitucion, la Ley de Organizacion y Regimen de las Comunas y la Ley Organica de Tierras Rurales y Territorios Ancestrales. Cualquier acto o decision contraria a estos preceptos sera demandada en nulidad ante los jueces competentes.",
+      "implicacion_practica": "ALERTA MAXIMA PARA LA APP. Quien compra un lote dentro de una comuna corre riesgo de que la escritura sea nula, aunque el vendedor sea comunero, aunque haya acta de asamblea y aunque un notario haya autorizado. Ante cualquier consulta de compra en comuna: advertir y derivar a abogado ANTES de pagar."
+    },
+    {
+      "id": "LN-18",
+      "norma": "LEY-NOTARIAL",
+      "articulo": "18",
+      "titulo": "Atribuciones exclusivas de los notarios",
+      "verificado": true,
+      "temas": [
+        "atribuciones",
+        "protocolizacion",
+        "escrituras",
+        "autenticacion"
+      ],
+      "contenido": "Son atribuciones exclusivas de los notarios, ademas de las constantes en otras leyes, entre otras: 1) autorizar los actos y contratos a que fueren llamados y redactar las correspondientes escrituras, salvo que tuvieren razon o excusa legitima para no hacerlo; 2) protocolizar instrumentos publicos o privados por orden judicial o a solicitud de parte interesada PATROCINADA POR ABOGADO, salvo prohibicion legal; 3) autenticar las firmas puestas ante el en documentos que no sean escrituras publicas; 4) dar fe de la supervivencia de las personas naturales; 5) dar fe de la exactitud y conformidad de copias de documentos exhibidos. El articulo incluye numerosas atribuciones agregadas por reformas sucesivas, entre ellas la particion extrajudicial de bienes, el divorcio por mutuo consentimiento sin hijos menores, la disolucion de sociedad conyugal, la declaratoria de extincion de usufructo, y las notificaciones de traspaso o cesion de derechos.",
+      "implicacion_practica": "Dato util: para PROTOCOLIZAR se exige patrocinio de abogado. El notario NO reemplaza al abogado. Y el notario da fe, no resuelve conflictos: si hay disputa sobre quien es el dueno, el notario no la decide."
+    },
+    {
+      "id": "LN-18.1",
+      "norma": "LEY-NOTARIAL",
+      "articulo": "18.1",
+      "titulo": "Comparecencia telematica ante notario",
+      "verificado": true,
+      "temas": [
+        "notaria en linea",
+        "telematico",
+        "firma electronica"
+      ],
+      "contenido": "Para la realizacion de las diligencias y actuaciones notariales, la comparecencia de las partes podra ser tanto de manera fisica como telematica. En el segundo caso, la peticion debera ser firmada electronicamente y los comparecientes declararan cumplir los requisitos del articulo 27 de esta Ley. (Agregado en RO 345-S, 08-12-2020.)",
+      "implicacion_practica": "Relevante para migrantes: un ecuatoriano en el exterior puede comparecer telematicamente con firma electronica, sin necesidad de poder consular en todos los casos."
+    },
+    {
+      "id": "LN-27",
+      "norma": "LEY-NOTARIAL",
+      "articulo": "27",
+      "titulo": "Examen previo a la escritura publica",
+      "verificado": true,
+      "temas": [
+        "escritura publica",
+        "capacidad",
+        "requisitos"
+      ],
+      "contenido": "Antes de redactar una escritura publica, el notario debe examinar la capacidad y los requisitos legales de los otorgantes y del acto.",
+      "implicacion_practica": "Si el notario se niega a escriturar, normalmente es por un defecto en el titulo o en la capacidad, no por capricho. Vale preguntar el motivo por escrito."
+    },
+    {
+      "id": "LN-6",
+      "norma": "LEY-NOTARIAL",
+      "articulo": "6 y 7",
+      "titulo": "Que es un notario y donde ejerce",
+      "verificado": true,
+      "temas": [
+        "notario",
+        "fe publica",
+        "competencia territorial"
+      ],
+      "contenido": "Los notarios son funcionarios investidos de fe publica para autorizar, a requerimiento de parte, los actos, contratos y documentos determinados en las leyes. Cada notario ejerce su funcion dentro del canton para el que haya sido nombrado, cualquiera que sea el domicilio de los otorgantes, la ubicacion de los bienes materia del acto o contrato, o el lugar del cumplimiento de las obligaciones.",
+      "implicacion_practica": "Consulta frecuente: se puede escriturar en Quito un terreno que esta en otra provincia. Si. El notario actua en su canton, pero el inmueble puede estar en cualquier parte. La INSCRIPCION si va en el Registro de la Propiedad del canton donde esta el predio."
+    },
+    {
+      "id": "LOOTUGS-17",
+      "norma": "LOOTUGS",
+      "articulo": "17",
+      "titulo": "Clases de suelo - urbano y rural",
+      "verificado": true,
+      "temas": [
+        "clasificacion del suelo",
+        "urbano",
+        "rural",
+        "parroquia"
+      ],
+      "contenido": "En los planes de uso y gestion de suelo, todo el suelo se clasificara en urbano y rural en consideracion a sus caracteristicas actuales. La clasificacion del suelo es INDEPENDIENTE de la asignacion politico-administrativa de la parroquia como urbana o rural.",
+      "implicacion_practica": "CRITICO para la app: vivir en una parroquia rural NO significa que el predio sea suelo rural, y viceversa. Lo que manda es el PUGS del canton, no el nombre de la parroquia. Antes de clasificar una consulta hay que remitir al certificado municipal, no asumir."
+    },
+    {
+      "id": "LOOTUGS-19",
+      "norma": "LOOTUGS",
+      "articulo": "19",
+      "titulo": "Subclases de suelo rural y restricciones al fraccionamiento",
+      "verificado": true,
+      "temas": [
+        "suelo rural",
+        "proteccion",
+        "expansion urbana",
+        "extractivo",
+        "fraccionamiento"
+      ],
+      "contenido": "Subclases del suelo rural: 1) suelo rural de produccion, destinado a actividades agroproductivas, acuicolas, ganaderas, forestales y de aprovechamiento turistico respetuosas del ambiente, donde se encuentra RESTRINGIDA la construccion y el fraccionamiento; 2) suelo rural para aprovechamiento extractivo; 3) suelo rural de expansion urbana, que podra ser habilitado para uso urbano conforme al plan de uso y gestion de suelo, y sera siempre colindante con el suelo urbano del canton, salvo casos especiales; 4) suelo rural de proteccion, en el que por su condicion se encuentra restringida la construccion y el fraccionamiento.",
+      "implicacion_practica": "Explica por que a mucha gente le niegan dividir su finca: en suelo rural de produccion y de proteccion el fraccionamiento esta restringido, no prohibido en absoluto pero sujeto a condiciones del PUGS."
+    },
+    {
+      "id": "LOOTUGS-lote-minimo",
+      "norma": "LOOTUGS",
+      "articulo": "24 y normativa urbanistica",
+      "titulo": "Lote minimo lo fija cada municipio",
+      "verificado": true,
+      "temas": [
+        "lote minimo",
+        "PUGS",
+        "fraccionamiento",
+        "subdivision"
+      ],
+      "contenido": "La normativa urbanistica de cada GAD municipal o metropolitano comprendera al menos el lote minimo, los coeficientes de ocupacion, aislamientos, volumetrias y alturas. Las habilitaciones del suelo para subdivision, fraccionamiento, particion o urbanizacion observaran las dimensiones y superficies minimas de los lotes y los porcentajes de pendiente establecidos en el PUGS y demas instrumentos de planificacion.",
+      "implicacion_practica": "La app NO puede dar un lote minimo nacional: no existe. Cada canton lo fija en su PUGS. Respuesta correcta: consultar el PUGS o el IRM del canton. Para Quito, el IRM (Informe de Regulacion Metropolitana) es el documento que lo dice.",
+      "nota_interna": "Falta cargar el lote minimo vigente del DMQ por zona. Requiere el PUGS de Quito."
+    },
+    {
+      "id": "LOTRTA-18",
+      "norma": "LOTRTA",
+      "articulo": "18",
+      "titulo": "Limitaciones a la propiedad rural estatal",
+      "temas": [
+        "prescripcion",
+        "tierras del Estado"
+      ],
+      "contenido": "Las tierras rurales del Estado no son objeto de prescripcion adquisitiva de dominio. Son nulos y de ningun valor los derechos o gravamenes constituidos sobre las tierras del Estado por quienes se han arrogado la calidad de propietarios o posesionarios.",
+      "implicacion_practica": "REGLA CRITICA: no se puede ganar por prescripcion un terreno estatal rural. La via es la adjudicacion administrativa ante la Autoridad Agraria Nacional, no el juicio.",
+      "verificado": true
+    },
+    {
+      "id": "LOTRTA-21",
+      "norma": "LOTRTA",
+      "articulo": "21",
+      "titulo": "Limitaciones especiales",
+      "temas": [
+        "extranjeros",
+        "frontera",
+        "areas protegidas"
+      ],
+      "contenido": "Prohibida la transferencia de propiedad de tierras rurales a personas naturales o juridicas extranjeras en una franja de veinte kilometros paralela a las lineas de frontera. Tampoco pueden adquirir a ningun titulo tierras rurales en areas de seguridad ni areas protegidas.",
+      "implicacion_practica": "Consulta frecuente de extranjeros que quieren comprar finca. Verificar distancia a frontera.",
+      "verificado": true
+    },
+    {
+      "id": "LOTRTA-3",
+      "norma": "LOTRTA",
+      "articulo": "3",
+      "titulo": "Posesion y propiedad ancestral",
+      "temas": [
+        "territorio ancestral",
+        "comuna",
+        "propiedad colectiva"
+      ],
+      "contenido": "Define tierra y territorio en posesion y propiedad ancestral como el espacio fisico sobre el cual una comunidad, comuna, pueblo o nacionalidad de origen ancestral ha generado historicamente una identidad, en forma actual e ininterrumpida. La propiedad de estas tierras es imprescriptible, inalienable, inembargable e indivisible. Su adjudicacion es gratuita y esta exenta del pago de tasas e impuestos.",
+      "implicacion_practica": "Una comuna NO puede vender ni hipotecar su territorio ancestral, y nadie puede prescribirlo en su contra.",
+      "verificado": true
+    },
+    {
+      "id": "LOTRTA-54",
+      "norma": "LOTRTA",
+      "articulo": "54",
+      "titulo": "Regularizacion - definicion",
+      "temas": [
+        "regularizacion",
+        "titulacion",
+        "competencia"
+      ],
+      "contenido": "La regularizacion de la posesion, sea agraria o de vivienda, es el conjunto de acciones para legalizar, titular, redistribuir o reconocer el derecho a la propiedad sobre la tierra rural estatal. La regularizacion agraria es competencia exclusiva de la Autoridad Agraria Nacional; la regularizacion de vivienda es competencia exclusiva del ente rector de habitat y vivienda. Comprende: titulacion a favor de quienes esten en posesion agraria ininterrumpida por un lapso minimo de cinco anos; redistribucion a organizaciones campesinas; legalizacion de territorios ancestrales; y saneamiento y resolucion de conflictos por mediacion en sede administrativa.",
+      "implicacion_practica": "Determina A QUIEN se dirige el ciudadano: MAG si es agrario, MIDUVI si es vivienda rural.",
+      "verificado": true
+    },
+    {
+      "id": "LOTRTA-55",
+      "norma": "LOTRTA",
+      "articulo": "55",
+      "titulo": "Posesion agraria",
+      "temas": [
+        "posesion agraria",
+        "cinco anos"
+      ],
+      "contenido": "Posesion agraria es la ocupacion material de una extension de tierra rural del Estado y de sus frutos, adquirida de buena fe, sin violencia y sin clandestinidad, con el animo de que sea reconocida y adjudicada su propiedad. Para ser eficaz debe ser actual e ininterrumpida por un tiempo no menor de cinco anos.",
+      "implicacion_practica": "El plazo clave para tierra rural estatal es 5 anos (no 15 como en prescripcion civil).",
+      "verificado": true
+    },
+    {
+      "id": "LOTRTA-56",
+      "norma": "LOTRTA",
+      "articulo": "56",
+      "titulo": "Efectos juridicos de la posesion agraria",
+      "temas": [
+        "posesion agraria",
+        "transferencia",
+        "herencia"
+      ],
+      "contenido": "El reconocimiento de la posesion agraria no constituye titulo de dominio. El posesionario puede transferir su derecho de posesion mediante instrumento publico, pero NO se transfiere el tiempo de posesion: el nuevo posesionario debe acreditar sus propios cinco anos. Por causa de muerte si se transmite la posesion agraria y el causante transmite a sus herederos el tiempo de posesion. No tienen validez los gravamenes constituidos sobre tierras del Estado por quienes se han arrogado falsamente la calidad de propietarios.",
+      "implicacion_practica": "MUY consultado: si compras una posesion, el reloj se reinicia. Si la heredas, no.",
+      "verificado": true
+    },
+    {
+      "id": "LOTRTA-57",
+      "norma": "LOTRTA",
+      "articulo": "57",
+      "titulo": "Instrumentos juridicamente ineficaces",
+      "temas": [
+        "derechos y acciones",
+        "titulos falsos",
+        "notarios"
+      ],
+      "contenido": "Las transferencias fundadas en posesiones, derechos y acciones de sitio, derechos y acciones de montana, hijuelas, compraventa de derechos y acciones, herencias, donaciones o prescripcion adquisitiva sobre tierras estatales NO constituyen titulo de propiedad, aunque se hayan inscrito en el Registro de la Propiedad, catastrado en el municipio o pagado tributos. Esta prohibido a notarios, registradores de la propiedad y funcionarios municipales protocolizar, certificar, catastrar o registrar actos basados en tales instrumentos; de hacerlo se presumen legalmente nulos.",
+      "implicacion_practica": "Clave contra el trafico de tierras. Tener escritura inscrita y pagar predial NO prueba propiedad si el origen era tierra estatal.",
+      "verificado": true
+    },
+    {
+      "id": "LOTRTA-59",
+      "norma": "LOTRTA",
+      "articulo": "59",
+      "titulo": "Adjudicacion",
+      "temas": [
+        "adjudicacion",
+        "justo titulo"
+      ],
+      "contenido": "La adjudicacion es el acto administrativo publico de disposicion o enajenacion de tierras rurales por el cual el Estado transfiere y titula el dominio de un predio de su patrimonio a favor de quien ha estado en posesion agraria de tierra rural estatal y cumple los requisitos de la Ley. La adjudicacion de tierras rurales estatales en posesion agraria o de vivienda constituye justo titulo.",
+      "implicacion_practica": "Es acto administrativo, no juicio. No va a un juez.",
+      "verificado": true
+    },
+    {
+      "id": "LOTRTA-63",
+      "norma": "LOTRTA",
+      "articulo": "63",
+      "titulo": "Exclusiones - quienes NO pueden ser adjudicatarios",
+      "temas": [
+        "exclusiones",
+        "requisitos"
+      ],
+      "contenido": "No pueden ser adjudicatarios: a) extranjeros dentro de los veinte kilometros de frontera, areas de seguridad y areas protegidas, y quienes por su estatus migratorio no puedan ejercer actividades economicas permanentes; b) quienes hayan sido declarados invasores o traficantes de tierras por resolucion en firme o sentencia ejecutoriada; c) personas cuya actividad economica no sea compatible con lo agropecuario, forestal, silvicola, acuicola o de conservacion; d) quienes ya fueron beneficiarios de una adjudicacion anterior, salvo predios inferiores a la Unidad Productiva Familiar; e) quienes perdieron tierras adjudicadas por reversion o las vendieron; f) funcionarios publicos que intervengan en el proceso, sus conyuges y parientes hasta cuarto grado de consanguinidad y segundo de afinidad.",
+      "implicacion_practica": "Filtro de entrada. Si la persona cae aqui, no hay tramite que hacer.",
+      "verificado": true
+    },
+    {
+      "id": "LOTRTA-68",
+      "norma": "LOTRTA",
+      "articulo": "68",
+      "titulo": "Formalidades para la titulacion",
+      "temas": [
+        "requisitos",
+        "declaracion responsable",
+        "cabida"
+      ],
+      "contenido": "El peticionario debe presentar declaracion responsable de: no haber sido adjudicatario de tierras del Estado en superficies mayores a la Unidad Productiva Familiar; asumir responsabilidad directa en la ejecucion del plan de manejo productivo; haber estado en posesion agraria por al menos cinco anos; y aceptar el compromiso de pagar el valor de la tierra. La autoridad da publicidad a las peticiones en tramite antes de resolver. Si la cabida real es mayor a la adjudicada se rectifica la resolucion y el valor; si es menor, se rectifica el valor y se restituye lo cobrado en exceso.",
+      "implicacion_practica": "Lista de requisitos que el ciudadano debe reunir antes de ir al MAG.",
+      "verificado": true
+    },
+    {
+      "id": "LOTRTA-70",
+      "norma": "LOTRTA",
+      "articulo": "70",
+      "titulo": "Perfeccionamiento de la titulacion",
+      "temas": [
+        "inscripcion",
+        "impuestos",
+        "plazos"
+      ],
+      "contenido": "La titulacion se realiza mediante acto administrativo de adjudicacion. Los actos de transferencia de dominio de predios adjudicados al amparo de esta Ley son de cuantia indeterminada y estan exentos del pago de tributos correspondientes a la transferencia de dominio. La providencia se remite al GAD municipal para catastro y registro con cargo al adjudicatario. La inscripcion en el Registro de la Propiedad la solicita la autoridad dentro de los treinta dias siguientes a la adjudicacion; su omision es causal de destitucion del funcionario.",
+      "implicacion_practica": "No se paga alcabala en estas adjudicaciones. Dato de alto valor para el consultante.",
+      "verificado": true
+    },
+    {
+      "id": "LOTRTA-81",
+      "norma": "LOTRTA",
+      "articulo": "81",
+      "titulo": "Reglas aplicables a territorios en posesion ancestral",
+      "verificado": true,
+      "temas": [
+        "uso y usufructo",
+        "herencia",
+        "derecho consuetudinario",
+        "infraestructura publica"
+      ],
+      "contenido": "Los derechos de uso y usufructo se reconoceran mediante instrumento publico a los miembros de comunas, comunidades, pueblos y nacionalidades. Se reconoceran las modalidades de transmision hereditaria de los derechos de uso y usufructo sobre las tierras comunales o territorios ancestrales. Las practicas de derecho propio o consuetudinario respecto al acceso, uso, usufructo y distribucion de la tierra constituiran normas de administracion interna. Para construir infraestructura de vivienda, salud, educacion u otros servicios publicos, la comuna debera ceder al Estado el derecho de uso y usufructo de superficies determinadas, pero esas tierras se mantendran en propiedad comunitaria.",
+      "implicacion_practica": "El uso y usufructo SI se hereda. Es lo que el comunero transmite a sus hijos, no la propiedad. Y ni siquiera para una escuela se transfiere el dominio: solo se cede el uso."
+    },
+    {
+      "id": "OM-038-asamblea-comunal",
+      "norma": "OM-038-2022",
+      "articulo": "asambleas comunales (proyecto de reglamento)",
+      "titulo": "Asamblea comunal y Asamblea de Comunas y Comunidades del DMQ",
+      "verificado": false,
+      "temas": [
+        "participacion ciudadana",
+        "asamblea comunal",
+        "cabildo",
+        "presupuestos participativos",
+        "Kitu Kara"
+      ],
+      "contenido": "Se inscribe una asamblea comunal por cada comuna del DMQ ante la Administracion Zonal correspondiente, en concordancia con los registros de la Direccion Metropolitana de Parroquias Rurales. Se respeta la conformacion de los Cabildos o Consejos de Gobiernos Comunitarios como maxima autoridad de la asamblea comunal. La asamblea elige tres representantes principales y tres alternos, con paridad de genero, que participan con voz y voto en las asambleas parroquiales de presupuestos participativos. La inscripcion NO constituye reconocimiento de personeria juridica y no crea ni extingue derechos mas alla del derecho a la participacion. Existe ademas una Asamblea de Comunas y Comunidades que integra a presidentes y secretarios de los cabildos de todas las comunas del DMQ, a las Organizaciones de Segundo Grado, y a representantes de los pueblos afroecuatoriano, montubio y Kitu Kara; se reune al menos una vez al ano y designa diez delegados a la Asamblea del DMQ. La agenda se coordina y consensua con los representantes del Pueblo Kitu Kara, montubio y afroecuatoriano.",
+      "implicacion_practica": "OJO: esto es PARTICIPACION CIUDADANA, no tierras. Sirve para incidir en presupuestos participativos y obras, no para titular ni delimitar territorio. La app NO debe ofrecerlo como via para resolver un problema de tierras. Dato util: la inscripcion de la asamblea NO da personeria juridica — quien crea que asi legaliza su comuna, esta equivocado.",
+      "nota_interna": "BORRADOR con observaciones incrustadas. El propio documento senala que el capitulo de Asambleas Comunales contradice los Arts. 56 y 57 num. 9 y 10 de la Constitucion y la Sentencia 1779-18-EP/21, porque las asambleas comunales ya son parte de la estructura de la comuna y no necesitan conformarse. NO citar como norma vigente."
+    },
+    {
+      "id": "OM-073-2024-ambito",
+      "norma": "OM-073-2024",
+      "articulo": "ambito",
+      "titulo": "Alcance de la regularizacion en Quito",
+      "temas": [
+        "Quito",
+        "regularizacion",
+        "fecha de corte"
+      ],
+      "contenido": "Establece un proceso agil y especifico para la regularizacion y titularizacion de los asentamientos humanos de hecho y consolidados del Distrito Metropolitano de Quito. Aplica a los asentamientos identificados o ingresados hasta el 11 de noviembre de 2022, fecha de publicacion en el Registro Oficial 602 de la Ordenanza Metropolitana 044-2022 (Regimen Administrativo del Suelo del DMQ). Los asentamientos que cumplen los requisitos no seran gravados con hipoteca. Ejecuta la Unidad Especial Regula tu Barrio (UERB).",
+      "implicacion_practica": "FILTRO CRITICO: si el asentamiento ingreso despues del 11-nov-2022, esta ordenanza NO le aplica. Es la primera pregunta que debe hacer la app a un consultante de Quito.",
+      "verificado": true
+    },
+    {
+      "id": "OM-073-2024-gratuidad",
+      "norma": "OM-073-2024",
+      "articulo": "gratuidad",
+      "titulo": "Gratuidad del tramite y canales de denuncia (UERB)",
+      "temas": [
+        "Quito",
+        "gratuidad",
+        "corrupcion",
+        "denuncia",
+        "trafico de tierras"
+      ],
+      "contenido": "Todos los tramites realizados por la Unidad Especial Regula tu Barrio son completamente gratuitos. Si un funcionario solicita algun tipo de pago, debe denunciarse. Canales: correo denuncias@quitohonesto.gob.ec; oficinas en Av. Amazonas N21-252 y Jeronimo Carrion, edificio Londres, tercer piso; portal https://quitohonesto.gob.ec; aplicacion Quito Honesto. La UERB atiende por unidades desconcentradas: Oficina Central, Calderon y Eugenio Espejo (rural), Quitumbe y Eloy Alfaro, La Delicia y Eugenio Espejo (urbano).",
+      "implicacion_practica": "DATO DE ALTO VALOR SOCIAL. Es la defensa directa contra tramitadores que cobran por un servicio gratuito. La app debe decirlo en toda consulta de Quito sobre regularizacion.",
+      "verificado": true
+    },
+    {
+      "id": "OM-073-2024-requisitos-regularizacion",
+      "norma": "OM-073-2024",
+      "articulo": "requisitos de precalificacion",
+      "titulo": "Requisitos para la regularizacion de un asentamiento (Quito)",
+      "temas": [
+        "Quito",
+        "regularizacion",
+        "requisitos",
+        "UERB",
+        "barrio"
+      ],
+      "contenido": "La solicitud la presenta el representante legal, presidente o presidenta de la directiva reconocida legalmente, o los copropietarios autorizados por la asamblea del Asentamiento Humano de Hecho y Consolidado, ante la unidad responsable (UERB), con: a) copia simple de la o las escrituras que acrediten la propiedad del inmueble a regularizar, inscritas en el Registro de la Propiedad a nombre de la organizacion social o de los beneficiarios, individual o colectivamente por derechos y acciones que consoliden el 100%; b) nombramiento del representante legal legalizado; si la organizacion NO esta legalmente reconocida, autorizacion otorgada en asamblea por al menos el 51% de la totalidad de copropietarios, con reconocimiento de firma ante notario publico o diligencia de constatacion notarial (la falsedad material o ideologica en las firmas se procesa conforme a la normativa aplicable); c) listado de socios o copropietarios; d) propuesta de fraccionamiento en mas de diez lotes, en formato digital e impreso, junto al levantamiento planimetrico, con el area total del macro lote y de la propuesta; e) documentacion que avale la ocupacion del asentamiento por un tiempo minimo de 5 anos.",
+      "implicacion_practica": "DOS FILTROS DUROS que la app debe preguntar de entrada: (1) el macro lote debe tener escritura inscrita a nombre de la organizacion o de los copropietarios al 100% por derechos y acciones; si nadie tiene escritura, este NO es el proceso. (2) la propuesta debe ser de MAS DE DIEZ LOTES: un caso individual no entra por aqui. Ademas: 51% para autorizar si la organizacion no esta reconocida, y 5 anos minimo de ocupacion.",
+      "verificado": true
+    },
+    {
+      "id": "OM-073-2024-titularizacion",
+      "norma": "OM-073-2024",
+      "articulo": "titularizacion",
+      "titulo": "Requisito para la titularizacion (Quito)",
+      "temas": [
+        "Quito",
+        "titularizacion",
+        "particion administrativa",
+        "escritura individual"
+      ],
+      "contenido": "Requisito: solicitud dirigida al Alcalde del Distrito Metropolitano para el proceso de particion administrativa de asentamientos humanos de hecho y consolidados del DMQ. Los ciudadanos deberan presentar la documentacion que el municipio requiera en cada etapa del proceso, conforme a las particularidades de cada caso. La titularizacion concluye con el otorgamiento de escrituras individuales mediante ordenanzas de fraccionamiento y resoluciones administrativas de particion.",
+      "implicacion_practica": "Es la segunda etapa: primero se regulariza el asentamiento completo, luego se titulariza lote por lote. No son tramites paralelos, son secuenciales.",
+      "verificado": true
+    },
+    {
+      "id": "REG-LOTRTA-uso-usufructo",
+      "norma": "REG-LOTRTA",
+      "articulo": "certificacion de uso y usufructo",
+      "titulo": "Como se acredita el derecho de un comunero sobre su parcela",
+      "verificado": true,
+      "temas": [
+        "uso y usufructo",
+        "comunero",
+        "parcela",
+        "credito",
+        "asamblea"
+      ],
+      "contenido": "El representante legal de la comuna certifica el derecho de uso y usufructo del comunero y su familia sobre la parte de tierra comunitaria asignada y ocupada. A la certificacion se adjunta: el certificado del Registro de la Propiedad de la tierra de propiedad comunal, copia certificada del nombramiento del representante legal debidamente inscrito, y un croquis de ubicacion, extension y linderos del area asignada. La modificacion o enmienda de datos erroneos en la certificacion sera autorizada por la asamblea general de la comuna. En todo lo demas se estara a las normas internas y practicas consuetudinarias.",
+      "implicacion_practica": "ESTA es la via legitima para el comunero: NO obtiene escritura individual, obtiene una certificacion de uso y usufructo. Con ella puede acceder a credito de la banca publica (Art. 82 LOTRTA), pero no puede vender el terreno."
+    }
+  ]
+}

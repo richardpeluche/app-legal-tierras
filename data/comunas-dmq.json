@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "titulo": "Comunas del Distrito Metropolitano de Quito",
+    "fuente": "Documento proporcionado por el usuario (captura de hoja de calculo, 2026-08-25)",
+    "transcrito": "2026-08-25",
+    "total_comunas": 73,
+    "total_organizaciones": 6,
+    "uso": "Deteccion automatica de ruta comunal. Si el usuario menciona una parroquia o sector de esta lista, la app debe preguntar si su terreno esta dentro de la comuna.",
+    "advertencias": [
+      "El documento usa colores (rojo, verde, naranja) cuyo significado NO consta en la captura. No se transcribio ningun estado juridico porque no se conoce que representan.",
+      "La segunda seccion del documento (ORGANIZACIONES Y CO...) reinicia la numeracion en 72, solapandose con la de comunas. Se separo en otro bloque.",
+      "Las organizaciones NO son comunas. No tienen el regimen del Art. 57 CRE ni de la Ley de Comunas por el solo hecho de constar aqui.",
+      "Listado NO verificado contra registro oficial del MAG. Sirve para orientar la conversacion, no para afirmar que un predio es comunal."
+    ]
+  },
+
+  "comunas": [
+    {"n":1,"zona":"Quitumbe","parroquia":"Chillogallo","nombre":"Espejo"},
+    {"n":2,"zona":"Eloy Alfaro","parroquia":"Chilibulo","nombre":"Chilibulo Marco Pamba La Raya"},
+
+    {"n":3,"zona":"Norte Eugenio Espejo","parroquia":"Belisario Quevedo","nombre":"Santa Clara de San Millán"},
+    {"n":4,"zona":"Norte Eugenio Espejo","parroquia":"Iñaquito","nombre":"Miraflores"},
+    {"n":5,"zona":"Norte Eugenio Espejo","parroquia":"Iñaquito","nombre":"Armero"},
+    {"n":6,"zona":"Norte Eugenio Espejo","parroquia":"Zámbiza","nombre":"San José de Cocotog"},
+    {"n":7,"zona":"Norte Eugenio Espejo","parroquia":"Guayllabamba","nombre":"Santo Domingo de Burneo (Sevilla)"},
+    {"n":8,"zona":"Norte Eugenio Espejo","parroquia":"San José de Minas","nombre":"La Chonta Alance"},
+    {"n":9,"zona":"Norte Eugenio Espejo","parroquia":"San José de Minas","nombre":"Jatunpamba"},
+    {"n":10,"zona":"Norte Eugenio Espejo","parroquia":"Nayón","nombre":"San Francisco de Tanda y Pelileo"},
+    {"n":11,"zona":"Norte Eugenio Espejo","parroquia":"Puéllaro","nombre":"Aloguincho"},
+    {"n":12,"zona":"Norte Eugenio Espejo","parroquia":"Puéllaro","nombre":"Coyagal"},
+    {"n":13,"zona":"Norte Eugenio Espejo","parroquia":"Puéllaro","nombre":"Pinguilla"},
+    {"n":14,"zona":"Norte Eugenio Espejo","parroquia":"Perucho","nombre":"Ambuela"},
+
+    {"n":15,"zona":"La Delicia","parroquia":"San Antonio de Pichincha","nombre":"Carcelén - Mitad del Mundo"},
+    {"n":16,"zona":"La Delicia","parroquia":"Nono","nombre":"San Francisco de Alaspungo"},
+    {"n":17,"zona":"La Delicia","parroquia":"Nanegalito","nombre":"Santa Elena"},
+    {"n":18,"zona":"La Delicia","parroquia":"Pacto","nombre":"Pacto Loma"},
+    {"n":19,"zona":"La Delicia","parroquia":"Pacto","nombre":"Sahuangal"},
+    {"n":20,"zona":"La Delicia","parroquia":"Pacto","nombre":"Pachijal"},
+    {"n":21,"zona":"La Delicia","parroquia":"Pacto","nombre":"Buenos Aires"},
+    {"n":22,"zona":"La Delicia","parroquia":"Pacto","nombre":"El Paraíso"},
+    {"n":23,"zona":"La Delicia","parroquia":"Pacto","nombre":"Ingapi"},
+    {"n":24,"zona":"La Delicia","parroquia":"Pacto","nombre":"El Porvenir"},
+
+    {"n":25,"zona":"Calderón","parroquia":"Calderón","nombre":"Llano Grande"},
+    {"n":26,"zona":"Calderón","parroquia":"Calderón","nombre":"San Miguel del Común"},
+    {"n":27,"zona":"Calderón","parroquia":"Calderón","nombre":"San Francisco de Oyacoto"},
+    {"n":28,"zona":"Calderón","parroquia":"Calderón","nombre":"Capilla"},
+    {"n":29,"zona":"Calderón","parroquia":"Calderón","nombre":"Santa Anita"},
+    {"n":30,"zona":"Calderón","parroquia":"Calderón","nombre":"Elena Enríquez Espinoza"},
+
+    {"n":31,"zona":"Tumbaco","parroquia":"Cumbayá","nombre":"Lumbisí"},
+    {"n":32,"zona":"Tumbaco","parroquia":"Tumbaco","nombre":"Leopoldo Chávez"},
+    {"n":33,"zona":"Tumbaco","parroquia":"Tumbaco","nombre":"Tola Chica"},
+    {"n":34,"zona":"Tumbaco","parroquia":"Tumbaco","nombre":"San Francisco de la Tola Grande"},
+    {"n":35,"zona":"Tumbaco","parroquia":"Tumbaco","nombre":"Comuna Central de Tumbaco"},
+    {"n":36,"zona":"Tumbaco","parroquia":"Puembo","nombre":"Chiche Anejo"},
+    {"n":37,"zona":"Tumbaco","parroquia":"Puembo","nombre":"Mangahuantag"},
+    {"n":38,"zona":"Tumbaco","parroquia":"Pifo","nombre":"Palugo"},
+    {"n":39,"zona":"Tumbaco","parroquia":"Yaruquí","nombre":"El Tejar"},
+    {"n":40,"zona":"Tumbaco","parroquia":"Yaruquí","nombre":"Oyambarillo"},
+    {"n":41,"zona":"Tumbaco","parroquia":"Yaruquí","nombre":"Oyambaro"},
+    {"n":42,"zona":"Tumbaco","parroquia":"Yaruquí","nombre":"Sicsipamba"},
+    {"n":43,"zona":"Tumbaco","parroquia":"Yaruquí","nombre":"Chinangachi"},
+    {"n":44,"zona":"Tumbaco","parroquia":"Tababela","nombre":"Guambi"},
+    {"n":45,"zona":"Tumbaco","parroquia":"Checa","nombre":"San Rafael"},
+    {"n":46,"zona":"Tumbaco","parroquia":"Checa","nombre":"El Carmen"},
+    {"n":47,"zona":"Tumbaco","parroquia":"El Quinche","nombre":"San Vicente de Cupucuro"},
+    {"n":48,"zona":"Tumbaco","parroquia":"El Quinche","nombre":"San Antonio de Cupucuro"},
+    {"n":49,"zona":"Tumbaco","parroquia":"El Quinche","nombre":"San Vicente de Iguiñaro"},
+    {"n":50,"zona":"Tumbaco","parroquia":"El Quinche","nombre":"San José del Quinche"},
+    {"n":51,"zona":"Tumbaco","parroquia":"El Quinche","nombre":"La Esperanza"},
+    {"n":52,"zona":"Tumbaco","parroquia":"El Quinche","nombre":"San Miguel de El Quinche"},
+    {"n":53,"zona":"Tumbaco","parroquia":"El Quinche","nombre":"Buenos Aires"},
+    {"n":54,"zona":"Tumbaco","parroquia":"El Quinche","nombre":"La Victoria de El Quinche"},
+
+    {"n":55,"zona":"Chillos","parroquia":"Conocoto","nombre":"Chachas de Conocoto"},
+    {"n":56,"zona":"Chillos","parroquia":"Píntag","nombre":"San Juan de la Tola"},
+    {"n":57,"zona":"Chillos","parroquia":"Píntag","nombre":"Cuatro de Octubre"},
+    {"n":58,"zona":"Chillos","parroquia":"Píntag","nombre":"Calvario de la Calera"},
+    {"n":59,"zona":"Chillos","parroquia":"Píntag","nombre":"Cinco de Abril \"Ubillus\""},
+    {"n":60,"zona":"Chillos","parroquia":"Píntag","nombre":"El Carmen"},
+    {"n":61,"zona":"Chillos","parroquia":"Píntag","nombre":"Santa Isabel del Marco"},
+    {"n":62,"zona":"Chillos","parroquia":"Alangasí","nombre":"Centro del Pueblo de Alangasí"},
+    {"n":63,"zona":"Chillos","parroquia":"Alangasí","nombre":"San Juan Bautista de Angamarca"},
+    {"n":64,"zona":"Chillos","parroquia":"Alangasí","nombre":"San Pedro del Tingo"},
+    {"n":65,"zona":"Chillos","parroquia":"Guangopolo","nombre":"Soria Loma"},
+    {"n":66,"zona":"Chillos","parroquia":"Guangopolo","nombre":"Rumiloma"},
+    {"n":67,"zona":"Chillos","parroquia":"Guangopolo","nombre":"La Toglla"},
+    {"n":68,"zona":"Chillos","parroquia":"Amaguaña","nombre":"El Ejido de Turubamba"},
+    {"n":69,"zona":"Chillos","parroquia":"Amaguaña","nombre":"Cuendina"},
+    {"n":70,"zona":"Chillos","parroquia":"Amaguaña","nombre":"Santa Isabel"},
+    {"n":71,"zona":"Chillos","parroquia":"Amaguaña","nombre":"La Vaquería"},
+    {"n":72,"zona":"Chillos","parroquia":"La Merced","nombre":"San Francisco de Baños"},
+
+    {"n":73,"zona":"Mejía","parroquia":null,"nombre":"Comuna Romerillos"}
+  ],
+
+  "organizaciones": [
+    {"n":72,"zona":"Quito","parroquia":"Calderón","nombre":"Chuccurillos"},
+    {"n":73,"zona":"Quito","parroquia":"Tumbaco","nombre":"Sumak Jambi"},
+    {"n":74,"zona":"Quito","parroquia":"Tumbaco","nombre":"Ex Asambleísta Rural"},
+    {"n":75,"zona":"Quito","parroquia":"Amaguaña","nombre":"Sara Chillo Muyu Ayllu"},
+    {"n":76,"zona":"Quito","parroquia":"Amaguaña","nombre":"Red Plurinacional Amaguaña"},
+    {"n":77,"zona":"Quito","parroquia":"Quito Urbano","nombre":"Jóvenes de Collacoto"}
+  ],
+
+  "parroquias_con_comuna": [
+    "Alangasí","Amaguaña","Belisario Quevedo","Calderón","Checa","Chilibulo",
+    "Chillogallo","Conocoto","Cumbayá","El Quinche","Guangopolo","Guayllabamba",
+    "Iñaquito","La Merced","Nanegalito","Nayón","Nono","Pacto","Perucho","Pifo",
+    "Píntag","Puéllaro","Puembo","San Antonio de Pichincha","San José de Minas",
+    "Tababela","Tumbaco","Yaruquí","Zámbiza"
+  ]
+}

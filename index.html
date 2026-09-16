@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es-EC">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tierras EC — Orientación legal sobre terrenos</title>
+<meta name="description" content="Orientación informativa sobre legalización de terrenos, adjudicaciones y tierras comunales en Ecuador.">
+<meta name="theme-color" content="#14614F">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ══ AVISO LEGAL DE ENTRADA ══ -->
+<div id="gate" class="gate">
+  <div class="gate-box">
+    <p class="eyebrow">Antes de empezar</p>
+    <h1>Esto es orientación, no asesoría legal</h1>
+    <p>Esta herramienta explica qué dice la ley ecuatoriana sobre terrenos, lotes
+       y tierras comunales. Cita los artículos en los que se basa para que usted
+       pueda verificarlos.</p>
+    <ul class="gate-list">
+      <li>No reemplaza a un abogado.</li>
+      <li>No redacta demandas ni escrituras.</li>
+      <li>No puede decirle si usted va a ganar un caso.</li>
+      <li>Si tiene un juicio en curso o un plazo que vence, consulte a un abogado hoy.</li>
+    </ul>
+    <p class="corte">Normativa actualizada al <strong id="fechaCorte">25 de agosto de 2026</strong></p>
+    <button id="aceptar" class="btn-primary">Entiendo, continuar</button>
+  </div>
+</div>
+
+<!-- ══ CLASIFICADOR ══ -->
+<main id="rutas" class="rutas" hidden>
+  <header class="head">
+    <p class="eyebrow">Tierras EC</p>
+    <h1>¿Dónde está el terreno?</h1>
+    <p class="sub">La respuesta correcta depende de esto. Son tres regímenes
+       distintos y no se mezclan.</p>
+  </header>
+
+  <div class="parcelas">
+    <button class="parcela" data-ruta="comuna">
+      <svg viewBox="0 0 120 90" aria-hidden="true" class="plano">
+        <path d="M8 40 L34 12 L86 8 L112 34 L104 78 L44 84 Z"/>
+        <path d="M34 12 L60 46 L104 78" class="lindero"/>
+        <path d="M60 46 L44 84" class="lindero"/>
+        <circle cx="60" cy="46" r="3" class="mojon"/>
+      </svg>
+      <span class="p-nombre">Dentro de una comuna ancestral</span>
+      <span class="p-desc">Hay cabildo, síndico, asamblea general o mingas.
+        La tierra es colectiva.</span>
+    </button>
+
+    <button class="parcela" data-ruta="urbana">
+      <svg viewBox="0 0 120 90" aria-hidden="true" class="plano">
+        <path d="M12 14 H108 V76 H12 Z"/>
+        <path d="M44 14 V76 M76 14 V76 M12 46 H108" class="lindero"/>
+      </svg>
+      <span class="p-nombre">Zona urbana</span>
+      <span class="p-desc">Barrio, lotización o asentamiento dentro de la ciudad.</span>
+    </button>
+
+    <button class="parcela" data-ruta="rural">
+      <svg viewBox="0 0 120 90" aria-hidden="true" class="plano">
+        <path d="M10 62 L30 22 L92 10 L112 50 L78 82 L22 80 Z"/>
+        <path d="M30 22 L78 82" class="lindero"/>
+        <circle cx="30" cy="22" r="3" class="mojon"/>
+        <circle cx="78" cy="82" r="3" class="mojon"/>
+      </svg>
+      <span class="p-nombre">Zona rural</span>
+      <span class="p-desc">Finca, chacra o terreno fuera del área urbana.</span>
+    </button>
+
+    <button class="parcela parcela-duda" data-ruta="duda">
+      <svg viewBox="0 0 120 90" aria-hidden="true" class="plano">
+        <path d="M14 20 L96 14 L106 66 L26 74 Z" class="punteado"/>
+        <text x="60" y="52" class="interrog">?</text>
+      </svg>
+      <span class="p-nombre">No estoy seguro</span>
+      <span class="p-desc">Le hacemos unas preguntas para ubicarlo.</span>
+    </button>
+  </div>
+
+  <p class="nota-pie">Vivir en una parroquia rural no significa que el terreno sea
+    suelo rural. Lo define el plan de uso del suelo del municipio.</p>
+</main>
+
+<!-- ══ CONSULTA ══ -->
+<section id="chat" class="chat" hidden>
+  <header class="chat-head">
+    <button id="volver" class="btn-volver" aria-label="Volver al inicio">←</button>
+    <span id="rutaActiva" class="ruta-chip"></span>
+  </header>
+
+  <div id="hilo" class="hilo" role="log" aria-live="polite"></div>
+
+  <div id="sugeridas" class="sugeridas"></div>
+
+  <form id="form" class="entrada">
+    <label for="pregunta" class="sr-only">Escriba su consulta</label>
+    <textarea id="pregunta" rows="1" placeholder="Escriba su consulta…"
+              autocomplete="off"></textarea>
+    <button type="submit" id="enviar" class="btn-enviar">Consultar</button>
+  </form>
+
+  <p class="disclaimer-pie">Información general. No sustituye la asesoría de un abogado.</p>
+</section>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
